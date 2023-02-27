@@ -15,4 +15,13 @@ class Runway {
         }
         Runway.planes.push(plane)
     }
+
+    remove(plane) {
+        if (Runway.planes.length === 0){
+            throw new Error ('No planes in runway')
+        }
+        Runway.planes.pop(plane)
+    }
 }
+
+module.exports = Runway;
